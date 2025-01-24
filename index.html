@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page with Interactive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom Styles for Navbar Scroll Effect */
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-transparent text-white p-4 transition-all ease-in-out duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <h1 class="text-3xl font-bold">Task 1 </h1>
+      <!-- Navigation Links -->
+      <ul class="flex space-x-6 text-xl">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400 ">Projects</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-green-600 text-white">
+    <h2 class="text-5xl font-bold">Welcome to the Landing Page</h2>
+</section>
+
+<section id="about" class="min-h-screen flex-col items-center justify-center bg-green-600 text-white ">
+    <h2 class="text-4xl text-center font-bold pt-20 pb-10 ">About Me</h2>
+         <div class="border-4 py-40 rounded-3xl">
+            <p class="px-10 text-center text-xl">Hello! I’m Manjunath , an aspiring web developer with a strong passion for coding and a growing interest in blockchain technology. 
+                I’m currently embarking on my first internship, where I’m gaining valuable experience and building real-world skills in web development.
+                Throughout this internship, I've been honing my knowledge of modern web technologies, working with a variety of tools to create efficient, high-quality websites.
+                I’m a firm believer in continuous learning, which is why I’m diving deep into the world of blockchain. The possibilities of decentralized applications and smart contracts excite me, and I’m eager to explore how blockchain can revolutionize industries.
+                On a day-to-day basis, I use VS Code as my primary IDE, which helps me stay organized and productive in my development process. I leverage Git and GitHub for version control, ensuring smooth collaboration and maintaining a clean, efficient codebase. Additionally, I embrace AI tools like ChatGPT to assist with problem-solving, debugging, and improving my coding skills, as I understand how valuable these tools can be in enhancing my workflow.
+                I am always looking for new opportunities to learn, collaborate, and push the boundaries of what I can achieve.
+                I’m excited about the future of technology and am committed to becoming a skilled developer who can contribute to impactful, innovative projects.
+            </p>
+        </div>
+  </section>
+
+
+  <section id="projects" class="min-h-screen flex flex-col items-center justify-center bg-green-600 text-white">
+    <h2 class="text-4xl text-center font-bold pt-20 pb-10">Project</h2>
+    <div class="border-4 py-40 px-10 rounded-3xl w-full max-w-4xl">
+        <p class="text-center text-xl leading-relaxed whitespace-normal break-words">
+            <span class="text-3xl font-bold">Healthcare</span>
+            <br />
+            Healthcare is an online platform designed to connect patients with doctors for urgent medical consultations. The platform enables patients to seek advice from healthcare experts through live video calls, especially in non-physical emergencies or situations where immediate treatment suggestions are critical.  
+            <br /><br />
+            <strong>Purpose/Goal:</strong>
+            To address emergency medical issues by providing expert advice and temporary treatment recommendations that can stabilize the patient until they are admitted to a hospital.  
+            <br /><br />
+            <strong >Unique Features/Challenges Solved</strong>
+            <ul class="list-disc list-inside">
+                <li>Real-time video call functionality to connect patients with specialized doctors.</li>
+                <li>Seamless user interface for quick access to medical help.</li>
+                <li>Advanced AI integration for pre-diagnosis and directing patients to the right expert.</li>
+            </ul>
+            <br />
+            <strong>Technologies Used:</strong>
+            <ul class="list-disc list-inside">
+                <li>Frontend: HTML, Tailwind CSS, JavaScript, React.js</li>
+                <li>Backend: Node.js, Python</li>
+                <li>Database: MongoDB</li>
+                <li>Other Tools: AI integration for pre-diagnosis</li>
+            </ul>
+            <br />
+            <strong>Type of Project:</strong>
+            Team Project: A collaborative effort built with a team of developers and designers.
+        </p>
+    </div>
+</section>
+
+
+<!-- Tailwind CSS Media Queries for Responsiveness -->
+<style>
+    @media (max-width: 1024px) {
+        #about .border-4 {
+            padding: 10px 20px;
+        }
+        #about pre {
+            font-size: 1rem; /* smaller text size for medium screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        #about h2 {
+            font-size: 2rem; /* Smaller font size for heading */
+        }
+        #about .border-4 {
+            padding: 15px;
+        }
+        #about pre {
+            font-size: 0.875rem; /* Further reduce text size */
+        }
+        #about .text-3xl {
+            font-size: 2xl; /* Resize healthcare title */
+        }
+    }
+
+    @media (max-width: 480px) {
+        #about {
+            padding: 10px;
+        }
+        #about pre {
+            font-size: 0.75rem; /* Small text size */
+        }
+        #about h2 {
+            font-size: 1.5rem; /* Even smaller heading */
+        }
+    }
+</style>
+
+
+<section id="contact" class="min-h-screen flex flex-col items-center justify-center bg-green-600 py-16">
+    <h2 class="text-4xl text-center font-bold text-white pb-8">Contact Me</h2>
+    <div class="max-w-4xl w-full px-6">
+        <form action="#" method="POST" class="bg-white p-8 rounded-xl shadow-md space-y-6">
+            <!-- Name Input -->
+            <div>
+                <label for="name" class="block text-lg font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" name="name" required class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Enter your name">
+            </div>
+            
+            <!-- Email Input -->
+            <div>
+                <label for="email" class="block text-lg font-medium text-gray-700">Email Address</label>
+                <input type="email" id="email" name="email" required class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Enter your email">
+            </div>
+            
+            <!-- Message Input -->
+            <div>
+                <label for="message" class="block text-lg font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" required class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-colors">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to handle navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
